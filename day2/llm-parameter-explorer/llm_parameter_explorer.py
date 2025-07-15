@@ -846,10 +846,6 @@ def main():
                     else:  # Anthropic
                         input_tokens = usage.get("input_tokens", 0)
                         output_tokens = usage.get("output_tokens", 0)
-                        cache_creation_tokens = usage.get(
-                            "cache_creation_input_tokens", 0
-                        )
-                        cache_read_tokens = usage.get("cache_read_input_tokens", 0)
 
                         # Calculate costs
                         cost_result = calculate_cost(
@@ -859,16 +855,12 @@ def main():
                             output_tokens,
                         )
 
-                        col1, col2, col3, col4, col5 = st.columns(5)
+                        col1, col2, col3 = st.columns(3)
                         with col1:
                             st.metric("Input Tokens", input_tokens)
                         with col2:
                             st.metric("Output Tokens", output_tokens)
                         with col3:
-                            st.metric("Cache Creation Tokens", cache_creation_tokens)
-                        with col4:
-                            st.metric("Cache Read Tokens", cache_read_tokens)
-                        with col5:
                             if cost_result["success"]:
                                 st.metric(
                                     "Total Cost", f"${cost_result['total_cost']:.4f}"
@@ -1001,12 +993,6 @@ def main():
                             else:  # Anthropic
                                 input_tokens = usage.get("input_tokens", 0)
                                 output_tokens = usage.get("output_tokens", 0)
-                                cache_creation_tokens = usage.get(
-                                    "cache_creation_input_tokens", 0
-                                )
-                                cache_read_tokens = usage.get(
-                                    "cache_read_input_tokens", 0
-                                )
 
                                 cost_result = calculate_cost(
                                     response["provider"],
@@ -1016,18 +1002,12 @@ def main():
                                 )
 
                                 # Display token breakdown
-                                col1, col2, col3, col4, col5 = st.columns(5)
+                                col1, col2, col3 = st.columns(3)
                                 with col1:
                                     st.metric("Input Tokens", input_tokens)
                                 with col2:
                                     st.metric("Output Tokens", output_tokens)
                                 with col3:
-                                    st.metric(
-                                        "Cache Creation Tokens", cache_creation_tokens
-                                    )
-                                with col4:
-                                    st.metric("Cache Read Tokens", cache_read_tokens)
-                                with col5:
                                     if cost_result["success"]:
                                         st.metric(
                                             "Total Cost",
