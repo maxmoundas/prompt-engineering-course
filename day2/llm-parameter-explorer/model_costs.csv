@@ -1,0 +1,7 @@
+provider,model,input_cost_per_1k_tokens,output_cost_per_1k_tokens
+OpenAI,gpt-4.1,0.002,0.008
+OpenAI,gpt-4.1-nano,0.0004,0.0016
+OpenAI,gpt-4o-mini,0.00015,0.0006
+Anthropic,claude-sonnet-4-20250514,0.003,0.015
+Anthropic,claude-3-7-sonnet-latest,0.003,0.015
+Anthropic,claude-3-5-haiku-latest,0.0008,0.004 
