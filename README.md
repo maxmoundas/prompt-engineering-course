@@ -6,6 +6,16 @@ A comprehensive four-day course on large language models, prompt engineering, an
 
 This course provides a thorough introduction to Large Language Models and practical prompt engineering techniques for research applications. The curriculum progresses from foundational concepts to advanced implementation strategies, emphasizing real-world applications, ethical considerations, and emerging technologies in the rapidly evolving AI landscape.
 
+## Interactive Demos & Resources
+
+**Hands-on examples from class sessions (all with Streamlit interfaces):**
+
+- **[LLM Parameter Explorer](day2/llm-parameter-explorer/)** - Experiment with LLM parameters (temperature, top_p, model selection)
+- **[Agent Framework](https://github.com/maxmoundas/agent-framework)** - Autonomous agent with tool calling system (generate QR code, fetch recent news, send email via Gmail connector) - we built the QR code tool as a live demo demonstrating Cursor's LLM-assisted software engineering capabilities in class
+- **[RAG System](https://github.com/maxmoundas/RAG)** - Retrieval-Augmented Generation with document embedding
+
+*These demos provide practical, runnable examples of the concepts covered in class. Feel free to clone, modify, and experiment with them.*
+
 ### Target Audience
 
 PhD researchers and post-docs from STEM disciplines seeking to understand and leverage generative AI technologies in their research workflows.
