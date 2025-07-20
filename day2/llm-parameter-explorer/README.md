@@ -1,5 +1,7 @@
 # LLM Parameter Explorer
 
+![LLM Parameter Explorer Interface](llm-parameter-explorer-interface.png)
+
 A comprehensive Streamlit application that allows you to explore and experiment with all configurable parameters for OpenAI and Anthropic LLM APIs.
 
 ## Features
